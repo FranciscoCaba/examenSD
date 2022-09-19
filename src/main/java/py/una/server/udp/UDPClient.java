@@ -24,13 +24,13 @@ class UDPClient {
 
             InetAddress IPAddress = InetAddress.getByName(direccionServidor);
             System.out.println("Conexión establecida con Servidor");
+            System.out.println("Francisco Daniel Cabañas Corvalán");
 
             byte[] sendData = new byte[1024];
             byte[] receiveData = new byte[1024];
 
             System.out.print("Ingrese el nombre del banco/financiera: ");
             String strBanco = inFromUser.readLine();
-            
             System.out.print("Ingrese el valor de compra: ");
             String compra = inFromUser.readLine();
             System.out.print("Ingrese el valor de venta: ");
@@ -62,15 +62,8 @@ class UDPClient {
             try {
                 clientSocket.receive(receivePacket);
 
-                String respuesta = new String(receivePacket.getData());
-                
-                InetAddress returnIPAddress = receivePacket.getAddress();
-                int port = receivePacket.getPort();
-
                 System.out.println("Cotizacion subida");
-                
             } catch (SocketTimeoutException ste) {
-
                 System.out.println("TimeOut: El paquete udp se asume perdido.");
             }
             clientSocket.close();
