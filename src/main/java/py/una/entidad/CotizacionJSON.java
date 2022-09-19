@@ -16,16 +16,16 @@ public class CotizacionJSON {
     
     
     public static Cotizacion stringObjeto(String str) throws Exception {
-    	Cotizacion p = new Cotizacion();
+    	Cotizacion c = new Cotizacion();
         JSONParser parser = new JSONParser();
 
         Object obj = parser.parse(str.trim());
         JSONObject jsonObject = (JSONObject) obj;
 
-        p.setBanco((String) jsonObject.get("banco"));
-        p.setCompra((Integer)jsonObject.get("compra"));
-        p.setVenta((Integer)jsonObject.get("venta"));
+        c.setBanco((String) jsonObject.get("banco"));
+        c.setCompra((Long)jsonObject.get("compra"));
+        c.setVenta((Long)jsonObject.get("venta"));
         
-        return p;
+        return c;
 	}
 }

@@ -2,14 +2,14 @@ package py.una.entidad;
 
 public class Cotizacion {
 	private String Banco;
-	private Integer Compra;
-	private Integer Venta;
+	private Long Compra;
+	private Long Venta;
 	
 	public Cotizacion () {
 		//nada
 	}
 	
-	public Cotizacion(String Banco, Integer Compra, Integer Venta) {
+	public Cotizacion(String Banco, Long Compra, Long Venta) {
 		this.Banco = Banco;
 		this.Compra = Compra;
 		this.Venta = Venta;
@@ -18,19 +18,19 @@ public class Cotizacion {
 	public void setBanco(String Banco) {
 		this.Banco = Banco;
 	}
-	public void setCompra(Integer Compra) {
+	public void setCompra(Long Compra) {
 		this.Compra = Compra;
 	}
-	public void setVenta(Integer Venta) {
+	public void setVenta(Long Venta) {
 		this.Venta = Venta;
 	}
 	public String getBanco() {
 		return this.Banco;
 	}
-	public Integer getCompra() {
+	public Long getCompra() {
 		return this.Compra;
 	}
-	public Integer getVenta() {
+	public Long getVenta() {
 		return this.Venta;
 	}
 }
